@@ -46,3 +46,12 @@ class UserAdvance(db.Model):
     def __repr__(self) -> str:
         return f'<UserAdvance {self.id} {self.first_name} {self.last_name}>'
 
+    @property
+    def dict(self):
+        return {
+            "first_name": self.first_name,
+            "last_name": self.last_name,
+            "date_of_birth": self.date_of_birth,
+            "phone_number": self.phone_number
+        }
+

@@ -12,19 +12,21 @@ class Config(object):
 
 
 class ProductionConfig(Config):
+    ENV = "production"
     DEBUG = True
 
 
 class StagingConfig(Config):
-    DEVELOPMENT = True
+    ENV = "development"
     DEBUG = True
 
 
 class DevelopmentConfig(Config):
-    DEVELOPMENT = True
+    ENV = "development"
     DEBUG = True
 
 
 class TestingConfig(Config):
+    ENV = "development"
     TESTING = True
 

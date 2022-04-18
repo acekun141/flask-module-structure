@@ -35,7 +35,7 @@ def token_require(func):
                 type = author.split(" ")[0]
                 token = author.split(" ")[1]
 
-                if not type or not token or token != "Bearer":
+                if not type or not token or type != "Bearer":
                     raise Exception("Invalid Type")
 
                 payload, is_invalid = get_payload_from_jwt(token)

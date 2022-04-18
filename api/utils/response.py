@@ -16,3 +16,6 @@ def error_server_error(message=""):
 
 def success_created(message=""):
     return message, 201
+
+def success(message={}):
+    return  message, 200
