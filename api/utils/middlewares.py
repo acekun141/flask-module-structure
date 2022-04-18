@@ -7,7 +7,7 @@ from api.utils.response import error_bad_request, unauthorized
 from api.utils.tokens import get_payload_from_jwt
 
 
-def valid_scheme(schema):
+def valid_schema(schema):
     def decorator(func):
         @wraps(func)
         def wrapper(*args, **kwargs):
